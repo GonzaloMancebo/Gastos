@@ -1,0 +1,55 @@
+/* Contenedor principal */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 5%;
+  background: linear-gradient(90deg, #cdffd8, #94b9ff);
+}
+
+/* Primera columna: Texto */
+.textColumn {
+  flex: 1;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4b634c; /* Verde grisáceo */
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333333; /* Gris oscuro */
+}
+
+/* Botón de inicio */
+.startButton {
+  background-color: #6fafff; /* Azul claro */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+  background-color: #4c91d7; /* Azul más oscuro y cálido */
+}
+
+/* Segunda columna: Imagen */
+.imageColumn {
+  flex: 1;
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: multiply; /* O prueba screen, overlay, etc. */
+}

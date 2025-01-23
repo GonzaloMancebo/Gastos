@@ -1,0 +1,180 @@
+/* General body styles */
+body {
+    background-color: #333; /* Gris oscuro para mejorar contraste */
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal */
+.sign-up-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%; /* Aseguramos que ocupe toda la altura */
+}
+
+/* Formulario (grid) */
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    max-height: 70%;
+    justify-items: center; /* Asegura que los elementos dentro se centren */
+    align-items: center; /* Centra los elementos en el eje vertical */
+}
+
+.form-container h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 0 20px; 
+    font-size: 2rem;
+    color: #f5f5f5;
+    text-align: center; 
+}
+
+
+/* Input */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 3px;
+    border: none; /* Elimina el borde por completo */
+    border-bottom: 2px solid #f5f5f5; /* Línea debajo del input */
+    font-size: 1.1rem;
+    background-color: transparent; /* Fondo transparente */
+    color: #f5f5f5; /* Texto blanco */
+}
+
+input:focus {
+    outline: none;
+    border-color: #1f78d1; /* Azul brillante */
+}
+
+/* Contenedor de los botones */
+.btn-container {
+    display: flex; /* Cambiado de 'column' a 'flex' */
+    flex-direction: column; /* Asegura que los botones se apilen en columna */
+    align-items: center; /* Centra los botones horizontalmente */
+    justify-content: center; /* Centra los botones verticalmente */
+    margin-top: 50px;
+    gap: 30px; /* Espaciado entre los botones */
+}
+
+
+/* Botón Login */
+.btn-login {
+    display: flex;
+    background-color: #1f78d1; /* Azul brillante */
+    color: white;
+    padding: 12px 60px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Asegura que el botón tenga un tamaño adecuado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+
+}
+
+.btn-login:hover {
+    background-color: #155fa7; /* Azul oscuro */
+}
+
+/* Botón Signup */
+.btn-signup {
+    display: flex;
+    background-color: #28a745; /* Verde brillante */
+    color: white;
+    padding: 12px 60px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    align-items: center;
+}
+
+.btn-signup:hover {
+    background-color: #218838; /* Verde oscuro */
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Notificaciones emergentes */
+.notification {
+    position: fixed;
+    top: 20px; /* Se coloca en la parte superior de la pantalla */
+    right: 20px; /* Se coloca a la derecha */
+    background-color: #f8d7da; /* Fondo rojo para los errores */
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 9999; /* Asegura que las notificaciones se muestren encima de otros elementos */
+    opacity: 0;
+    transform: translateY(-20px); /* Inicialmente fuera de la pantalla */
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
+}
+
+.notification.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0); /* Mueve la notificación a su lugar */
+}
+
+/* Animación para desaparecer */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.notification.hide {
+    animation: fadeOut 1s forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+
