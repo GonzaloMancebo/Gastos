@@ -1,0 +1,175 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+h1, h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+button {
+  background-color: transparent;  /* Sin fondo */
+  color: #888;  /* Color de texto gris */
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0f0f0;  /* Fondo gris claro al pasar el mouse */
+  border-color: #bbb;  /* Borde más oscuro en hover */
+}
+
+/* Contenedor principal */
+div {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 16px;
+  color: #777;
+}
+
+.date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.week-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.week-nav-buttons button {
+  margin: 0 10px;
+}
+
+.week-nav-buttons p {
+  font-size: 16px;
+}
+
+/* Gráficas */
+div > h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tabla de gastos */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+table tr:hover {
+  background-color: #f9f9f9;
+}
+
+table td {
+  font-size: 14px;
+}
+
+/* Formulario para agregar gasto */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  align-self: flex-start;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Navegación Inferior */
+nav {
+  margin-top: 40px;
+  background-color: #36a2eb;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  background-color: #1d8cd1;
+}

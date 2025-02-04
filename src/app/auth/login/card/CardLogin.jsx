@@ -5,7 +5,7 @@ import { app } from "../../../../../firebase.config";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import "./cardLogin.css";
+import "../../../styles/card/cardLogin.css";
 
 function CardLogin() {
   const [email, setEmail] = useState("");

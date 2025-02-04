@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation"; // Importar el hook de enrutamiento de next/navigation
 import Link from "next/link";
-import "./cardSignUp.css"; // Asegúrate de tener este archivo con los estilos
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"; // Importar Firebase Auth
 import {app} from "../../../../../firebase.config"; // Importa tu configuración de Firebase
+import "../../../styles/card/cardSignUp.css";
 
 function CardSignUp() {
   const [firstName, setFirstName] = useState("");

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import "./index.css";
+import "../../styles/index/index.css";
 
 function Index() {
   return (
