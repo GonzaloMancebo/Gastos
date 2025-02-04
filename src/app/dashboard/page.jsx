@@ -1,9 +1,9 @@
-import DashboardOption from "../components/dashboardOption/dashboardOption";
+import DashboardOption from "../dashboardOption/page";
 
 function Dashboard() {
   return (
     <div>
-      <DashboardOption />
+      <h1>dashboard</h1>
     </div>
   );
 }

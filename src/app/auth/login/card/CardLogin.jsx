@@ -42,7 +42,7 @@ function CardLogin() {
 
       // Redirigir al Dashboard después de un pequeño delay
       setTimeout(() => {
-        router.replace("/dashboard");
+        router.replace("/dashboardOption");
       }, 1000);
     } catch (error) {
       showNotification(error.message, "error");
